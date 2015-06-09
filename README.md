@@ -17,3 +17,4 @@ Find out the result.
 To improve the functionality I added a few tweaks, such as giving the user the ability to edit the set of movements and to have a delay in the movements, which necessitates the use of a JavaScript callback.
 
 All in all good fun and only took me about 4 hours.
+
