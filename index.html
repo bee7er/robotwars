@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html class="no-js">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <title></title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="stylesheet" href="css/bootstrap.min.css">
+        <style>
+            body {
+                padding-top: 50px;
+                padding-bottom: 20px;
+            }
+        </style>
+        <link rel="stylesheet" href="css/bootstrap-theme.min.css">
+        <link rel="stylesheet" href="css/main.css">
+
+        <script src="js/vendor/modernizr-2.6.2-respond-1.1.0.min.js"></script>
+
+    </head>
+    <body>
+
+        <div class="container">
+            <main>
+
+                <section>
+                    <h2>War Parameters</h2>
+                    <h3>The Grid</h3>
+                    <div class="">How big is the grid?</div>
+                    <div class="">
+                        Width: <input type="text" size="1" maxlength="1" id="dimension_x"value="5" />
+                        Height: <input type="text" size="1" maxlength="1" id="dimension_y" value="5" />
+                    </div>
+                    <h2>Enter your robots:</h2>
+                    <h3>Robot Number 1</h3>
+                    Position: X <input type="text" size="1" maxlength="1" id="start_1_x" value="1" />
+                    Position: Y <input type="text" size="1" maxlength="1" id="start_1_y" value="2" />
+                    Orientation:
+                    <select id="orientation_1">
+                        <option value="north" selected>North</option>
+                        <option value="south">South</option>
+                        <option value="east">East</option>
+                        <option value="west">West</option>
+                    </select>
+                    Movements:
+                    <input type="button" value="L" onclick="addRotateLeft('movements_1');" title="Rotate left" />
+                    <input type="button" value="R" onclick="addRotateRight('movements_1');" title="Rotate right" />
+                    <input type="button" value="M" onclick="addMoveForward('movements_1');" title="Move forward" />
+                    <input type="button" value="D" onclick="deleteLast('movements_1');" title="Delete last entry" />
+                    <span id="movements_1">L,M,L,M,L,M,L,M,M</span>
+                    <h3>Robot Number 2</h3>
+                    Position: X <input type="text" size="1" maxlength="1" id="start_2_x" value="3" />
+                    Position: Y <input type="text" size="1" maxlength="1" id="start_2_y" value="3" />
+                    Orientation:
+                    <select id="orientation_2">
+                        <option value="north">North</option>
+                        <option value="south">South</option>
+                        <option value="east" selected>East</option>
+                        <option value="west">West</option>
+                    </select>
+                    Movements:
+                    <input type="button" value="L" onclick="addRotateLeft('movements_2');" title="Rotate left" />
+                    <input type="button" value="R" onclick="addRotateRight('movements_2');" title="Rotate right" />
+                    <input type="button" value="M" onclick="addMoveForward('movements_2');" title="Move forward" />
+                    <input type="button" value="D" onclick="deleteLast('movements_2');" title="Delete last entry" />
+                    <span id="movements_2">M,M,R,M,M,R,M,M,M,M,R,M,M</span>
+
+                    <br><br>
+                    <input type="button" value="Start the War" onclick="startTheWar();" />
+                    <input type="button" value="Where are they now?" onclick="printStatus('Where they are now');" />
+
+                </section>
+
+                <section id="msg" style="display:none;color:#c40000;font-weight:bold;">ccccccccc</section>
+
+                <section id="grid" style="float:left;width:60%;padding:3px;"><!-- Contains generated content --></section>
+
+                <section id="status" style="float:right;width:40%;padding:3px;"><!-- Contains generated content --></section>
+
+                <div style="clear:both;"></div>
+
+            </main>
+
+            <hr>
+
+            <footer>
+            <p>&copy; RobotWars 2015</p>
+            </footer>
+        </div>
+        <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+        <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.11.1.min.js"><\/script>')</script>
+
+        <script src="js/vendor/bootstrap.min.js"></script>
+
+        <script src="js/main.js"></script>
+
+        <script type="text/javascript">
+            $(document).ready(function() {
+                ///startTheWar();
+            });
+        </script>
+    </body>
+</html>
