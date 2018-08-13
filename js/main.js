@@ -74,7 +74,7 @@ function checkForCollision(currentRobot) {
 }
 
 function plotRobotPosition(robot) {
-    $("#cell-"+robot.x+"-"+robot.y).html("<img src=\"img/"+robot.orientation+".png\" width=\"40\" border=\"0\" title=\"I am robot "+robot.id+"\" >");
+    $("#cell-"+robot.x+"-"+robot.y).html("<img src=\"img/"+robot.orientation+".png\" class=\"robot-"+robot.id+"\" width=\"40\" border=\"0\" title=\"I am robot "+robot.id+"\" >");
 }
 
 function unplotRobotPosition(robot) {
