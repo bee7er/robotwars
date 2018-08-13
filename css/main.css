@@ -18,18 +18,18 @@
    border:1px solid #c2c2c2;
 }
 
+.robot-1 {
+   background-color:#f00;
+}
 
+.robot-1-title {
+   color:#f00;
+}
 
+.robot-2 {
+   background-color:#0f0;
+}
 
-
-
-
-
-
-
-
-
-
-
-
-
+.robot-2-title {
+   color:#0f0;
+}
